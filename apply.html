@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="form for job applications for our company"> 
+        <meta name="keywords" content="vacancies, jobs, applications">
+        <meta name="author" content="company name"> <!--insert company name here-->
+        <title>Vacancies and Job Applications</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+         <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+            <p>
+                <label for="jobref">Job Reference Number</label>
+                <select name="jobref" id="jobref" required>
+                    <option value="">Please select</option>
+                    <option value="PLACEHOLDER">01982</option>
+                    <option value="micheal">12345</option>
+                    <option value="who">679</option>
+                </select>
+            </p>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <p><label for="fname">First Name</label> 
+                    <input type="text" name= "fname" id="fname" pattern="^[A-Za-z]{0,20}$" required>
+                </p>
+                <p><label for="lname">Last Name</label>
+                    <input type="text" name= "lname" id="lname" pattern="^[A-Za-z]{0,20}$" required>
+                </p>
+                    <label for="dob">Date of birth</label>
+                    <input type="text" name="dob" id="dob" placeholder="dd/mm/yyyy" pattern="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" required>
+                </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Gender</legend>
+                    <p>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label> 
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>     
+                        <input type="radio" id="notsay" name="gender" value="notsay">
+                        <label for="notsay">Prefer not to say</label>                                               
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Address</legend>
+                <p><label for="city">City</label> 
+                    <input type="text" name= "city" id="city" pattern="^{0,40}$" required>
+                </p>
+                <p><label for="zone">Zone</label> 
+                    <input type="text" name= "zone" id="zone" pattern="^[0-9]{0,2}$" required>
+                </p>
+                <p><label for="stnumber">Street Number</label> 
+                    <input type="text" name= "stnumber" id="stnumber" pattern="^[0-9]{0,5}$" required>
+                </p>
+                <p><label for="stname">Street Name</label> 
+                    <input type="text" name= "stname" id="stname" pattern="^[A-Za-z]{0,40}$" required>
+                </p>
+                <p><label for="unit">Unit Number</label> 
+                    <input type="text" name= "unit" id="unit" pattern="^[0-9]{0,5}$" required>
+                </p>
+                <p><label for="building">Building Number</label> 
+                    <input type="text" name= "building" id="building" pattern="^[0-9]{0,5}$" required>
+                </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Contact Information</legend>
+                <p><label for="email">Email Address</label> 
+                    <input type="text" name= "email" id="email" pattern="^[0-9]{0,5}$" required>
+                </p>
+                <p><label for="phone">Phone Number</label> 
+                    <input type="text" name= "phone" id="phone" pattern="^[0-9 ]{8,12}$" required>
+                </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Technical Skills</legend>
+                    <p>
+                        <label for="linux">Familiarity with Linux</label> 
+                        <input type="checkbox" id="linux" name="category[]" value="linux" checked="checked">                       
+                    </p>
+                    <p>
+                        <label for="netpluscert">Network+ Certification</label>
+                        <input type="checkbox" id="netpluscert" name="category[]" value="netpluscert">
+                    </p>
+                    <p>
+                        <label for="otherskills">Other Skills</label> <br>
+                        <textarea id="otherskills" name="otherskills" rows="4" cols="40" placeholder="If you have other skills, let us know here..."></textarea>
+                    </p>
+                    </fieldset>
+
+            <input type= "submit" value="Apply">
+            <input type= "reset" value="Reset Form">
+        </form>
+    </body>
+
+</html>
