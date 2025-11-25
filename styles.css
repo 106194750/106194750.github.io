@@ -16,32 +16,43 @@ background image taken from https://tiled-bg.blogspot.com/
 body {
   background-image: url("images/background.jpg");
   color: rgb(231, 225, 243);
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 a{
-    color: rgb(167, 55, 79);
+    color: rgb(63, 13, 103);
 }
 img{
     max-width:100%;
 }
 
 nav{
-    background-color: rgb(54, 30, 42);
+    background-color: rgba(76, 147, 182, 0.213);
     padding: .5em;
-    text-align: center;
 }
 
 h1{
     font:400 ;
 }
 article, footer, menu{
-    background-color: rgba(245, 245, 245, 0.772);
+    background-color: rgba(31, 7, 69, 0.383);
 padding: 2%;
 }
 
-nav a{
-    color: rgb(185, 175, 249);
-    text-decoration: none; 
-    
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+   color: rgb(185, 175, 249);
+}
+
+
+nav ul li a{
+    float: inline-start;
+    border: white dotted;
+    text-decoration: none;
+    margin: .2em;
+    background-color: rgba(164, 196, 255, 0.72);
+    padding: .3em;
 }
