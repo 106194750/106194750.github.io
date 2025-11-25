@@ -20,7 +20,7 @@ body {
 }
 
 a{
-    color: #1F0745;
+    color: #A882DD;
 }
 img{
     max-width:100%;
@@ -33,8 +33,9 @@ nav{
 }
 
 h1{
-    font:4em ;
-    font-style:oblique;
+    font: italic 2em 'Courier New', Courier, monospace ;
+    text-align: center;
+
 }
 article, footer, menu{
     background-color: #1f074562;
@@ -46,6 +47,11 @@ footer{
 aside{
     width: 25%;
     float: right;
+    margin: 2%;
+    padding: 1.5%;
+    border: #A5B5DF ridge;
+    border-radius: .7em;
+    background-color: #1f0745b9;
 }
 nav ul{
   list-style-type: none;
