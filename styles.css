@@ -12,6 +12,19 @@ description: refers to index.html, jobs.html, apply.html, about.html
 
 */
 
+p, h1, h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 img{
     max-width:100%;
+}
+
+nav{
+    background-color: rebeccapurple;
+    color: azure;
+}
+
+h1{
+    font: ;
 }
