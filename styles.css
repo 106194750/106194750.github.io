@@ -54,6 +54,7 @@ aside{
     border: #A5B5DF ridge;
     border-radius: .7em;
     background-color: #1f0745b9;
+    float: none;
 }
 nav ul{
   list-style-type: none;
@@ -62,6 +63,7 @@ nav ul{
   overflow: hidden;
   display: flex;
   justify-content: center;
+  float: none;
 }
 
 
