@@ -65,7 +65,7 @@ nav ul{
 }
 
 
-nav ul li a{
+nav ul li a {
     float: inline-start;
     border: #A882DD ridge;
     text-decoration: none;
@@ -81,5 +81,10 @@ section{
     margin: 2%;
 }
 .flexb{
-display:flex;
+display:flex;}
+
+@media (max-width: 600px) {
+  .flexb{
+    flex-direction: column;
+  }
 }
