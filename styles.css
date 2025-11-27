@@ -13,11 +13,18 @@ description: refers to index.html, jobs.html, apply.html, about.html
 background image taken from https://www.flickr.com/photos/webtreatsetc/4081217254/
 
 */
+html{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+/*
+that gets rid of the annoying horizontal scrolling. im not sure whats causing it but this fixes it.
+*/
+
 body {
   background-image: url("images/background.jpg");
   color: white;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 
 a{
@@ -25,7 +32,7 @@ a{
 }
 img{
     max-width:100%;
-}
+}  
 
 nav{
     background-color:#1F0745;
@@ -34,7 +41,7 @@ nav{
 }
 
 h1{
-    font: italic 2em 'Courier New', Courier, monospace ;
+    font: italic 2.5em 'Courier New', Courier, monospace ;
     text-align: center;
 
 }
@@ -63,6 +70,7 @@ nav ul{
   overflow: hidden;
   display: flex;
   justify-content: center;
+  font-size: large;
 }
 
 
@@ -84,7 +92,7 @@ section{
 .flexb{
 display:flex;}
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .flexb{
     flex-direction: column;
   }
