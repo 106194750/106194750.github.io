@@ -38,15 +38,16 @@ nav{
     background-color:#1F0745;
     padding: .5em;
     border-radius: 0.3em;
+    border-bottom: solid #a5b6dfe9;
 }
 
 h1{
-    font: italic 2.5em 'Courier New', Courier, monospace ;
+    font: italic 2.2em 'Courier New', Courier, monospace ;
     text-align: center;
 
 }
-article, footer, menu{
-    background-color: #1f074562;
+article, footer, aside{
+    background-color: #1c173396;
 padding: 2%;
 }
 
@@ -58,9 +59,9 @@ aside{
     float: right;
     margin: 2%;
     padding: 1.5%;
-    border: #A5B5DF ridge;
+    border: #A882DD ridge;
     border-radius: .7em;
-    background-color: #1f0745b9;
+    background-image: linear-gradient(135deg, #62117bb9, #2206aaa9);
 }
 
 nav ul{
@@ -90,10 +91,26 @@ section{
     margin: 2%;
 }
 .flexb{
-display:flex;}
+display:flex;
+   justify-content: space-evenly;
+}
 
 @media (max-width: 800px) {
   .flexb{
     flex-direction: column;
   }
+}
+
+fieldset{
+    padding: 1em;
+    padding-right: 2vw;
+    margin: 1em;
+    flex: auto;
+}
+
+legend{
+    font-size: large;
+}
+#formflex{
+    flex-wrap: wrap;
 }
