@@ -120,18 +120,29 @@ legend{
 
 table{
   border:0.1em solid white;
+  border-radius: .11em;
 }
 
 
 th{
   border:0.1em solid white;
   font-weight: bold;
+
 }
 th, td{
     background-color: #1F0745;
-    padding: 0.2em;
+    padding: 0.25em;
+    border-radius: 0.11em;
+    border: 0.1em solid #1c173300;
+
+
 }
 th:hover, td:hover{
     color: #1F0745;
     background-color: #a5b6dfe9;
+    border: 0.1em solid white;
+}
+
+th:hover{
+    background-color: #A882DD;
 }
