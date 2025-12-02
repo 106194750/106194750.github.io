@@ -2,11 +2,11 @@
 
 filename: styles.css
 
-author: hana ouaida
+authors: hana ouaida, zahra ahmad, asma hossein
 
 created: 25-11-25
 
-last modified: 25-11-25
+last modified: 02-12-25
 
 description: refers to index.html, jobs.html, apply.html, about.html
 
@@ -25,6 +25,7 @@ body {
   background-image: url("images/background.jpg");
   color: white;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.3em;
 }
 
 a{
@@ -44,6 +45,8 @@ nav{
 h1{
     font: italic 2.2em 'Courier New', Courier, monospace ;
     text-align: center;
+    background-color: #1F074587;
+    padding: 0.5%;
 
 }
 article, footer, aside{
@@ -113,4 +116,22 @@ legend{
 }
 #formflex{
     flex-wrap: wrap;
+}
+
+table{
+  border:0.1em solid white;
+}
+
+
+th{
+  border:0.1em solid white;
+  font-weight: bold;
+}
+th, td{
+    background-color: #1F0745;
+    padding: 0.2em;
+}
+th:hover, td:hover{
+    color: #1F0745;
+    background-color: #a5b6dfe9;
 }
