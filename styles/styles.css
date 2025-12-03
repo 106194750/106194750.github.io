@@ -155,7 +155,7 @@ th:hover{
       justify-content: center;
 }
 
-nav image{
-    height: 2.5em;
-    float: left;
+nav img{
+    height: 3em;
+    width: 5em;
 }
