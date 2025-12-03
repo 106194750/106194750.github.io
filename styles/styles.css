@@ -114,3 +114,27 @@ legend{
 #formflex{
     flex-wrap: wrap;
 }
+
+input[type="submit"] { 
+    float: inline-start;
+    border: #A882DD ridge;
+    text-decoration: none;
+    margin: .2em;
+    background-color: #a5b6dfe9;
+    padding: .3em;
+     border-radius: 0.3em;
+    color:#1F0745;
+}
+
+input[type="reset"] {
+
+    float: inline-start;
+    border: #A882DD ridge;
+    text-decoration: none;
+    margin: .2em;
+    background-color: #a5b6dfe9;
+    padding: .3em;
+     border-radius: 0.3em;
+    color:#1F0745;
+
+}
