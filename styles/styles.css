@@ -56,6 +56,12 @@ padding: 2%;
 
 footer{
     width: 100%;
+    background-color: #1F0745; 
+    border-top: 2px solid #A882DD; 
+    padding: 1.5em;
+    text-align: center; 
+    font-size: 0.7em;
+
 }
 aside{
     width: 25%;
