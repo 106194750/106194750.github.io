@@ -6,7 +6,7 @@ authors: hana ouaida, zahra ahmad, asma hossain
 
 created: 25-11-25
 
-last modified: 04-12-25
+last modified: 05-12-25
 
 description: refers to index.html, jobs.html, apply.html, about.html
 
@@ -224,10 +224,12 @@ color: plum;
 figure {
     text-align: center;
     margin: 2em auto;
+    float: right;
 }
 
 figure img {
     width: 20em;  
+    border: solid white;
     border-radius: 1em;
     display: block;
     margin: 0 auto;
@@ -239,3 +241,6 @@ figure figcaption {
     color: plum;
 }
 
+#id{
+    float: right;
+}
