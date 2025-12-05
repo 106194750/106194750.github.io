@@ -47,7 +47,6 @@ h1{
     text-align: center;
     background-color: #1F074587;
     padding: 0.5%;
-
 }
 article, footer, aside{
     background-color: #1c173396;
@@ -57,7 +56,7 @@ padding: 2%;
 footer{
     width: 100%;
     background-color: #1F0745; 
-    border-top: 2px solid #A882DD; 
+    border-top: 0.2em solid #A882DD; 
     padding: 1.5em;
     text-align: center; 
     font-size: 0.7em;
@@ -105,7 +104,7 @@ display:flex;
    justify-content: space-evenly;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 980px) {
   .flexb{
     flex-direction: column;
   }
@@ -162,12 +161,12 @@ th:hover{
 }
 
 nav img{
-    height: 3em;
-    width: 5em;
+    padding:.3em ;
+    height: 1.85em;
 }
 
 label {
-color: #A882DD;
+color: #c398ff;
 font-family: 'Courier New', Courier, monospace;
 padding: 0em
 
@@ -176,16 +175,15 @@ padding: 0em
 input[type="text"] {
 border: 2px solid plum;
 background-color: #1F0745;
-margin: 0.7em
-
-
+margin: 0.7em;
+    color: plum;
 }
 
 form {
     display: grid;
-    padding: 2em;
-    margin: 2em;
-    max-width: 80%;
+    padding: 1em;
+    margin: 1em;
+
     background-color: #1F074560;
     border-radius: 0.6em;
 }
@@ -204,11 +202,10 @@ input[type="reset"] {
 }
 
 select {
-border: 2px solid plum;
+border: 0.2em solid plum;
 background-color: #1F0745;
-padding: 0em;
-margin: 0.7em;
-
+padding: 0.2em;
+margin: 0.7em;  
 }
 
 select {
@@ -216,11 +213,11 @@ select {
 }
 
 textarea {
-border: 2px solid plum;
+border: 0.em solid plum;
 background-color: #1F0745;
 padding: 1em;
 margin: 0.7em;
-
+color: plum;
 }
 
 
