@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Position Descriptions Page </title>
+<link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+ 
+<?php include 'nav.inc'; ?>
+
+
+<header> <h1>Job Openings Description</h1> 
+</header>
+<aside> 
+<h2> About our hiring process</h2>
+<p> We evaluate all applicants based on their education, qualifications, and experience. If your application is approved, you will be called in for an interview. </p>
+</aside>
+
+<article class="flexb">
+<!--<h1> Positions Needed:</h1>
+-->
+
+<section> 
+
+<h2 id="NA">Network Administrator </h2>
+
+<p> An IT professional who can ensure the company's network is stable and secure while also providing technical support. </p>
+<p> <strong>Reference Number:</strong> NA942</p>
+<p> <strong>Salary range: </strong> $3000-$5000</p>
+<p> <strong>Reports to: </strong> Senior IT Manager</p>
+<h3><strong> Key Responsibilities</strong></h3>
+<ul>
+<li>Monitor and maintain network performance</li>
+<li>Troubleshoot connectivity issues</li>
+<li>Manage firewalls, routers, and VPN systems</li>
+<li>Ensure network is secure</li>
+</ul>
+
+<h3><strong> Qualifications</strong></h3>
+
+<p> <strong> Essential </strong></p>
+<ol>
+<li>Bachelor's degree in IT</li>
+<li>Minimum 3 years of work experience in the industry</li>
+<li>Certification in CompTIA</li>
+<li>Basic knowledge of cloud networking and network protocols </li>
+</ol>
+
+
+<p> <strong> Preferred Skills</strong></p>
+<ul>
+<li>Problem-solving </li>
+<li>Time management</li>
+<li>Critical thinking</li>
+</ul>
+
+
+</section>
+
+
+<section>
+<h2 id= "BD">Back-end Developer</h2>
+<p>A software developer who can build server-side logic and mantain database.</p>
+<p> <strong>Reference Number:</strong> BD609</p>
+<p> <strong>Salary range: </strong> $4000-$6300</p>
+<p> <strong>Reports to:</strong> Lead Software Engineer</p>
+<h3><strong> Key Responsibilities</strong></h3>
+<ul>
+<li>Manage databases</li>
+<li>Perform tests and debugs to ensure smooth running applications</li>
+<li>Build server-side logic</li>
+<li>Build and mantain APIs</li>
+</ul>
+
+<h3><strong> Qualifications</strong></h3>
+
+<p> <strong> Essential </strong></p>
+<ol>
+<li>Bachelor's degree in Computer Science</li>
+<li>Minimum 3 years of experience in the industry</li>
+<li>Basic knowledge of databases and programming languages</li>
+<li>Ability to manage servers</li>
+</ol>
+
+<p> <strong> Preferred Skills</strong></p>
+<ul>
+<li>Problem-solving</li>
+<li>Communication</li>
+<li>Attention to detail</li>
+</ul>
+
+<p> <strong> Programming languages required:</strong></p>
+<ol>
+<li>Java</li>
+<li>SQL</li>
+<li>Python</li>
+</ol>
+
+</section>
+</article>
+
+<footer>
+&copy; HAZ Web Design
+<p>Contact us at: <a href= "mailto:info@hazwebdesign.com.au"> Email </a></p>
+<a href= "https://buc-lab.atlassian.net/jira/software/projects/WTP1/boards/35"> Our Jira Project </a>
+
+</footer>
+
+
+</body>
+
+</html>
