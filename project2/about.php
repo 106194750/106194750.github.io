@@ -79,6 +79,7 @@
 </table></section>
 
 </article>
+<?php include 'footer.inc'; ?>
 </body>
 
 </html>
