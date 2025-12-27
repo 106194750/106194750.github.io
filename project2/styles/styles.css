@@ -19,55 +19,60 @@ html{
 that gets rid of the annoying horizontal scrolling. im not sure whats causing it but this fixes it. -h
 */
 
+
 body {
   background-image: url("images/background.jpg");
-  color: white;
+  color: #ffffff;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.3em;
 }
 
 a{
-    color: #A882DD; 
+    color: #a8d8f0; 
 }
+
 img{
     max-width:100%;
 }  
 
 nav{
-    background-color:#1F0745;
+    background-color:#1e88c8;
     padding: .5em;
     border-radius: 0.3em;
-    border-bottom: solid #a5b6dfe9;
+    border-bottom: solid #a8d8f0;
 }
 
 h1{
     font: italic 2.2em 'Courier New', Courier, monospace ;
     text-align: center;
-    background-color: #1F074587;
+    background-color: #a8d8f0;
+    color: #0b3c5d;
     padding: 0.5%;
 }
+
 article, aside{
-    background-color: #1c173396;
-padding: 2%;
+    background-color: #1e88c8;
+    padding: 2%;
 }
 
 footer{
     width: 100%;
-    background-color: #1F0745; 
-    border-top: 0.2em solid #A882DD; 
+    background-color: #0b3c5d; 
+    border-top: 0.2em solid #a8d8f0; 
     padding: 1.5em;
     text-align: center; 
     font-size: 0.7em;
-
+    color: #ffffff;
 }
+
 aside{
     width: 25%;
     float: right;
     margin: 2%;
     padding: 1.5%;
-    border: #A882DD ridge;
+    border: #a8d8f0 ridge;
     border-radius: .7em;
-    background-image: linear-gradient(135deg, #62117bb9, #2206aaa9);
+    background-image: linear-gradient(135deg, #1e88c8, #0b3c5d);
 }
 
 nav ul{
@@ -80,26 +85,29 @@ nav ul{
   font-size: large;
 }
 
-
 nav ul li a {
     float: inline-start;
-    border: #A882DD ridge;
+    border: #a8d8f0 ridge;
     text-decoration: none;
     margin: .2em;
-    background-color: #a5b6dfe9;
+    background-color: #e6f4fb;
     padding: .3em;
-     border-radius: 0.3em;
-    color:#1F0745;
+    border-radius: 0.3em;
+    color:#0b3c5d;
+}
 
+nav ul li a:hover{
+    background-color: #a8d8f0;
 }
 
 section{
-        padding: 1%;
+    padding: 1%;
     margin: 2%;
 }
+
 .flexb{
-display:flex;
-   justify-content: space-evenly;
+    display:flex;
+    justify-content: space-evenly;
 }
 
 @media (max-width: 980px) {
@@ -107,138 +115,10 @@ display:flex;
     flex-direction: column;
   }
 }
-/*so everything flows beautifully on a small screen. -h */
 
 fieldset{
     padding: 1em;
     padding-right: 2vw;
     margin: 1em;
     flex: auto;
-}
-
-legend{
-    font-size: large;
-}
-#formflex{
-    flex-wrap: wrap;
-}
-/*for the form in apply.html. -h*/
-
-table{
-  border:0.1em solid white;
-  border-radius: .11em;
-}
-
-
-th{
-  border:0.1em solid white;
-  font-weight: bold;
-
-}
-th, td{
-    background-color: #1F0745;
-    padding: 0.25em;
-    border-radius: 0.11em;
-    border: 0.1em solid #1c173300;
-
-
-}
-th:hover, td:hover{
-    color: #1F0745;
-    background-color: #a5b6dfe9;
-    border: 0.1em solid white;
-}
-
-th:hover{
-    background-color: #A882DD;
-}
-
-.tab{
-    display: flex;
-      justify-content: center;
-}
-
-nav img{
-    padding:.3em ;
-    height: 1.85em;
-     display: block;
-}
-
-label {
-color: #c398ff;
-font-family: 'Courier New', Courier, monospace;
-padding: 0em
-
-}
-
-input[type="text"] {
-border: 2px solid plum;
-background-color: #1F0745;
-margin: 0.7em;
-    color: plum;
-}
-
-form {
-    display: grid;
-    padding: 1em;
-    margin: 1em;
-
-    background-color: #1F074560;
-    border-radius: 0.6em;
-}
-
-
-input[type="submit"],
-input[type="reset"] {
-    border: #A882DD ridge;
-    text-decoration: none;
-    margin: .2em;
-    background-color: #a5b6dfe9;
-    padding: .3em;
-     border-radius: 0.3em;
-    color:#1F0745;
-    font-weight: bold;
-}
-
-select {
-border: 0.2em solid plum;
-background-color: #1F0745;
-padding: 0.2em;
-margin: 0.7em;  
-}
-
-select {
-    color: plum;
-}
-
-textarea {
-border: 0.2em solid plum;
-background-color: #1F0745;
-padding: 1em;
-margin: 0.7em;
-color: plum;
-}
-
-figure {
-    text-align: center;
-    margin: 2em auto;
-    float: right;
-}
-
-figure img {
-    width: 20em;  
-    border: solid white;
-    border-radius: 1em;
-    display: block;
-    margin: 0 auto;
-}
-
-figure figcaption {
-    margin-top: 0.5em;
-    font-size: 0.9em;
-    color: plum;
-}
-
-#id{
-    float: right;
 }
