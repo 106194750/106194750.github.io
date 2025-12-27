@@ -50,6 +50,18 @@ article, aside{
     background-color: #1e88c8;
 padding: 2%;
 }
+article{
+    position: relative;
+}
+
+article::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #1e88c8;
+    opacity: 0.7;
+    z-index: -1;
+}
 
 footer{
     width: 100%;
