@@ -17,7 +17,7 @@
         <article>
             
             <h1>Apply for a position at HAZ Web Design</h1>
-         <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+         <form method="post" novalidate=”novalidate” action="http://mercury.swin.edu.au/it000000/formtest.php">
             <p>
                 <label for="jobref">Job Reference Number</label>
                 <select name="jobref" id="jobref" required>
