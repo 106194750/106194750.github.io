@@ -103,14 +103,6 @@
                         <label for="Java">Proficient in Java</label>
                     </p>
                     <p>
-                        <input type="checkbox" id="SQL" name="category[]" value="SQL">
-                        <label for="SQL">Proficient in SQL</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="Python" name="category[]" value="Python">
-                        <label for="Python">Proficient in Python</label>
-                    </p>
-                    <p>
                         <label for="otherskills">Other Skills</label> <br>
                         <textarea id="otherskills" name="otherskills" rows="4" cols="40" placeholder="If you have other skills, let us know here..."></textarea>
                     </p>
