@@ -21,11 +21,7 @@ that gets rid of the annoying horizontal scrolling. im not sure whats causing it
 
 body {
   background-image: url("images/background.jpg");
-<<<<<<< HEAD
   color: black;
-=======
-  color: rgba(255, 255, 255, 0);
->>>>>>> 0ca425fbf965a45827b9b5545e0f03d76e9fdae1
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.3em;
 }
@@ -152,7 +148,7 @@ th{
 
 }
 th, td{
-    background-color: #0b3c5d;
+    background-color: #abd1eb;
     padding: 0.25em;
     border-radius: 0.11em;
     border: 0.1em solid transparent;
@@ -181,17 +177,15 @@ nav img{
 }
 
 label {
-color: #e6f4fb;
 font-family: 'Courier New', Courier, monospace;
 padding: 0em
 
 }
 
-input[type="text"] {
-border: 2px solid#a8d8f0;
-background-color:#0b3c5d;
+input[type="text"], textarea, select {
+border: 2px solid#0b3c5d;
+background-color:#a8d8f0;
 margin: 0.7em;
-    color: plum;
 }
 
 form {
@@ -216,24 +210,6 @@ input[type="reset"] {
     font-weight: bold;
 }
 
-select {
-border: 0.2em solid  #a8d8f0;
-background-color:  #0b3c5d;
-padding: 0.2em;
-margin: 0.7em;  
-}
-
-select {
-    color: #ffffff;
-}
-
-textarea {
-border: 0.2em solid #a8d8f0;
-background-color: #0b3c5d;
-padding: 1em;
-margin: 0.7em;
-color: #ffffff;
-}
 
 figure {
     text-align: center;
