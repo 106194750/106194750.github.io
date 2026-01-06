@@ -1,109 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>Position Descriptions Page </title>
+<title>Job Descriptions</title>
 <link rel="stylesheet" href="styles/styles.css">
+
 </head>
-
 <body>
- 
-<?php include 'nav.inc'; ?>
 
+<?php
+require_once "settings.php";
+include 'header.inc';
+include 'nav.inc';
 
-<header> <h1>Job Openings Description</h1> 
-</header>
-<aside> 
-<h2> About our hiring process</h2>
-<p> We evaluate all applicants based on their education, qualifications, and experience. If your application is approved, you will be called in for an interview. </p>
-</aside>
+$query = "SELECT Job_title, Reference_Number, Salary_Range, Reports_to, Key_Responsibilities, Essential_Qualifications, Preferred_Skills, Programming_Languages FROM jobs";
 
-<article class="flexb">
-<!--<h1> Positions Needed:</h1>
--->
+$result = mysqli_query($conn, $query);
 
-<section> 
+if (!$result) {
+    die("Query failed: " . mysqli_error($conn));
+}
 
-<h2 id="NA">Network Administrator </h2>
+if (mysqli_num_rows($result) > 0) {
+    echo "<h1>Job Openings Description</h1>";
 
-<p> An IT professional who can ensure the company's network is stable and secure while also providing technical support. </p>
-<p> <strong>Reference Number:</strong> NA942</p>
-<p> <strong>Salary range: </strong> $3000-$5000</p>
-<p> <strong>Reports to: </strong> Senior IT Manager</p>
-<h3><strong> Key Responsibilities</strong></h3>
-<ul>
-<li>Monitor and maintain network performance</li>
-<li>Troubleshoot connectivity issues</li>
-<li>Manage firewalls, routers, and VPN systems</li>
-<li>Ensure network is secure</li>
-</ul>
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<section>";
+        echo "<h2>" . $row['Job_title'] . "</h2>";
+        echo "<p><strong>Reference Number:</strong> " . $row['Reference_Number'] . "</p>";
+        echo "<p><strong>Salary Range:</strong> " . $row['Salary_Range'] . "</p>";
+        echo "<p><strong>Reports To:</strong> " . $row['Reports_to'] . "</p>";
 
-<h3><strong> Qualifications</strong></h3>
+        echo "<h3>Key Responsibilities</h3>";
+        echo "<p>" . $row['Key_Responsibilities'] . "</p>";
 
-<p> <strong> Essential </strong></p>
-<ol>
-<li>Bachelor's degree in IT</li>
-<li>Minimum 3 years of work experience in the industry</li>
-<li>Certification in CompTIA</li>
-<li>Basic knowledge of cloud networking and network protocols </li>
-</ol>
+        echo "<h3>Essential Qualifications</h3>";
+        echo "<p>" . $row['Essential_Qualifications'] . "</p>";
 
+        echo "<h3>Preferred Skills</h3>";
+        echo "<p>" . $row['Preferred_Skills'] . "</p>";
 
-<p> <strong> Preferred Skills</strong></p>
-<ul>
-<li>Problem-solving </li>
-<li>Time management</li>
-<li>Critical thinking</li>
-</ul>
+        if (!empty($row['Programming_Languages'])) {
+            echo "<h3>Programming Languages</h3>";
+            echo "<p>" . $row['Programming_Languages'] . "</p>";
+        }
 
+        echo "</section><hr>";
+    }
 
-</section>
+    mysqli_free_result($result);
+} else {
+    echo "<p>No jobs found.</p>";
+}
 
-
-<section>
-<h2 id= "BD">Back-end Developer</h2>
-<p>A software developer who can build server-side logic and mantain database.</p>
-<p> <strong>Reference Number:</strong> BD609</p>
-<p> <strong>Salary range: </strong> $4000-$6300</p>
-<p> <strong>Reports to:</strong> Lead Software Engineer</p>
-<h3><strong> Key Responsibilities</strong></h3>
-<ul>
-<li>Manage databases</li>
-<li>Perform tests and debugs to ensure smooth running applications</li>
-<li>Build server-side logic</li>
-<li>Build and mantain APIs</li>
-</ul>
-
-<h3><strong> Qualifications</strong></h3>
-
-<p> <strong> Essential </strong></p>
-<ol>
-<li>Bachelor's degree in Computer Science</li>
-<li>Minimum 3 years of experience in the industry</li>
-<li>Basic knowledge of databases and programming languages</li>
-<li>Ability to manage servers</li>
-</ol>
-
-<p> <strong> Preferred Skills</strong></p>
-<ul>
-<li>Problem-solving</li>
-<li>Communication</li>
-<li>Attention to detail</li>
-</ul>
-
-<p> <strong> Programming languages required:</strong></p>
-<ol>
-<li>Java</li>
-<li>SQL</li>
-<li>Python</li>
-</ol>
-
-</section>
-</article>
-
-<?php include 'footer.inc'; ?>
-
+mysqli_close($conn);
+include 'footer.inc';
+?>
 </body>
-
 </html>

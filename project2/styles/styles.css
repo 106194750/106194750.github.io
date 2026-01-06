@@ -21,7 +21,7 @@ that gets rid of the annoying horizontal scrolling. im not sure whats causing it
 
 body {
   background-image: url("images/background.jpg");
-  color: white;
+  color: black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.3em;
 }
