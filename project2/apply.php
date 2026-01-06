@@ -17,13 +17,13 @@
         <article>
             
             <h1>Apply for a position at HAZ Web Design</h1>
-         <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+         <form method="post" novalidate=”novalidate” action="process_eoi.php">
             <p>
                 <label for="jobref">Job Reference Number</label>
                 <select name="jobref" id="jobref" required>
                     <option value="">Please select</option>
-                    <option value="backend">BD609</option>
-                    <option value="netadmin">NA942</option>
+                    <option value="BD609">BD609</option>
+                    <option value="NA942">NA942</option>
                 </select>
             </p>
             <div class="flexb" id="formflex">
@@ -39,17 +39,7 @@
                     <label for="dob">Date of birth</label>
                     <input type="text" name="dob" id="dob" placeholder="dd/mm/yyyy" pattern="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" required>
                 </p>
-                <p>Gender</p>
-                                    <p>
-                        <input type="radio" id="female" name="gender" value="female" required> 
-                        <label for="female">Female</label> </p><p>
-                        <input type="radio" id="male" name="gender" value="male">
-                        <label for="male">Male</label>     </p><p>
-                        <input type="radio" id="notsay" name="gender" value="notsay">
-                        <label for="notsay">Prefer not to say</label>                                               
-                    </p>
                 </fieldset>
-
                 <fieldset>
                     <legend>Address</legend>
                 <p><label for="city">City</label> 
@@ -58,14 +48,11 @@
                 <p><label for="zone">Zone</label> 
                     <input type="text" name= "zone" id="zone" pattern="^[0-9]{0,2}$" required>
                 </p>
-                <p><label for="stnumber">Street Number</label> 
-                    <input type="text" name= "stnumber" id="stnumber" pattern="^[0-9]{0,5}$" required>
+                <p><label for="street">Street</label> 
+                    <input type="text" name= "street" id="street" required>
                 </p>
-                <p><label for="stname">Street Name</label> 
-                    <input type="text" name= "stname" id="stname" pattern="^[A-Za-z]{0,40}$" required>
-                </p>
-                <p><label for="unit">Unit Number</label> 
-                    <input type="text" name= "unit" id="unit" pattern="^[0-9]{0,5}$" required>
+                <p><label for="suburb">Suburb</label> 
+                    <input type="text" name= "suburb" id="suburb" required>
                 </p>
                 <p><label for="building">Building Number</label> 
                     <input type="text" name= "building" id="building" pattern="^[0-9]{0,5}$" required>
@@ -95,20 +82,8 @@
                         <label for="bachelors">Bachelor's degree in Computer Science</label>
                     </p>
                     <p>
-                        <input type="checkbox" id="experience" name="category[]" value="experience">
-                        <label for="experience">At least 3 years of experience in the industry</label>
-                    </p>
-                    <p>
                         <input type="checkbox" id="Java" name="category[]" value="Java">
                         <label for="Java">Proficient in Java</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="SQL" name="category[]" value="SQL">
-                        <label for="SQL">Proficient in SQL</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="Python" name="category[]" value="Python">
-                        <label for="Python">Proficient in Python</label>
                     </p>
                     <p>
                         <label for="otherskills">Other Skills</label> <br>
