@@ -27,7 +27,7 @@ body {
 }
 
 a{
-    color: #1a9ddf; 
+    color: #005c8a; 
 }
 img{
     max-width:100%;
@@ -47,7 +47,7 @@ h1{
     padding: 0.5%;
 }
 article, aside{
-    background-color: #44a9e7e0;
+    background-color: #7ac4f1d7;
 padding: 2%;
 }
 article{
@@ -193,7 +193,7 @@ form {
     padding: 1em;
     margin: 1em;
 
-    background-color: #1e88c8;
+    background-color: #34a1e4;
     border-radius: 0.6em;
 }
 

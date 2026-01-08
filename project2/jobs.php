@@ -22,8 +22,8 @@ if (!$result) {
     die("Query failed: " . mysqli_error($conn));
 }
 
-if (mysqli_num_rows($result) > 0) {
-    echo "<h1>Job Openings Description</h1>";
+if (mysqli_num_rows($result) > 0) { 
+    echo "<h1>Job Openings Description</h1><article class='flexb'>";
 
     while ($row = mysqli_fetch_assoc($result)) {
         echo "<section>";
@@ -48,7 +48,7 @@ if (mysqli_num_rows($result) > 0) {
 
         echo "</section>";
     }
-
+    echo "</article>";
     mysqli_free_result($result);
 } else {
     echo "<p>No jobs found.</p>";
