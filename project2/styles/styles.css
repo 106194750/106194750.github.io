@@ -182,7 +182,7 @@ padding: 0em
 
 }
 
-input[type="text"], textarea, select {
+input[type="text"], textarea, select, input[type="password"]{
 border: 2px solid#0b3c5d;
 background-color:#a8d8f0;
 margin: 0.7em;
