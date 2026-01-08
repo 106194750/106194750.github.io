@@ -1,11 +1,6 @@
 <?php
 require_once "settings.php";
 
-$conn = mysqli_connect($host, $user, $pwd, $sql_db);
-if (!$conn) {
-  die("Database connection failed");
-}
-
 $action = $_POST["action"] ?? "";
 ?>
 
@@ -14,6 +9,11 @@ $action = $_POST["action"] ?? "";
 <head>
   <meta charset="utf-8">
   <title>Manage EOIs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta charset="utf-8">
+  <meta name="description" content="form for managers of our website"> 
+  <meta name="keywords" content="login, manages">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
@@ -25,8 +25,7 @@ $action = $_POST["action"] ?? "";
   <button type="submit">List all EOIs</button>
 </form>
 
-<br>
-
+ <article class="flexb">
 <!-- 2. List EOIs by Job Reference Number -->
 <form method="post">
   <input type="hidden" name="action" value="list_job">
@@ -35,7 +34,7 @@ $action = $_POST["action"] ?? "";
   <button type="submit">Search</button>
 </form>
 
-<br>
+
 
 <!-- 3. List EOIs by Applicant Name -->
 <form method="post">
@@ -47,7 +46,7 @@ $action = $_POST["action"] ?? "";
   <button type="submit">Search</button>
 </form>
 
-<br>
+
 
 <!-- 4. Delete EOIs by Job Reference Number -->
 <form method="post">
@@ -57,7 +56,7 @@ $action = $_POST["action"] ?? "";
   <button type="submit">Delete</button>
 </form>
 
-<br>
+
 
 <!-- 5. Change EOI Status -->
 <form method="post">
@@ -74,7 +73,7 @@ $action = $_POST["action"] ?? "";
 
   <button type="submit">Update</button>
 </form>
-
+</article>
 <hr>
 
 <?php

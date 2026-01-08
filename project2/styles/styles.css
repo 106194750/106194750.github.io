@@ -48,7 +48,7 @@ h1{
 }
 article, aside{
     background-color: #7ac4f1d7;
-padding: 2%;
+padding: 1%;
 }
 article{
     position: relative;
@@ -190,8 +190,8 @@ margin: 0.7em;
 
 form {
     display: grid;
-    padding: 1em;
-    margin: 1em;
+    padding: 0.5em;
+    margin: 0.1em;
 
     background-color: #34a1e4;
     border-radius: 0.6em;
@@ -199,7 +199,7 @@ form {
 
 
 input[type="submit"],
-input[type="reset"] {
+input[type="reset"], button{
     border:#1e88c8 ridge;
     text-decoration: none;
     margin: .2em;

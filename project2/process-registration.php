@@ -27,11 +27,11 @@ if ($result) {
     VALUES
     ('$username', '$hashed_pw')
     ";
-    mysqli_query($conn, $query2); 
-    if (!mysqli_query($conn, $query2)) {
+    $res = mysqli_query($conn, $query2); 
+    if (!$res) {
     die("There was an error with inserting to the database: " . mysqli_error($conn));
 } else {
-    echo "success!";
+    header("Location: login.php") ;
 }
 }else {
   echo "Please try again. There was an SQL error.";

@@ -2,6 +2,13 @@
 session_start();
 require_once("settings.php");
 
+// fails if username is null
+if (empty($_POST["username"])) { 
+    die("Please enter username.");}
+// fails if password is null
+if (empty($_POST["password"])) {
+    die("A password is required.");}
+
 $input_username = $_POST['username'];
 $input_password = $_POST['password'];
 
