@@ -46,7 +46,7 @@ if (mysqli_num_rows($result) > 0) {
             echo "<p>" . $row['Programming_Languages'] . "</p>";
         }
 
-        echo "</section><hr>";
+        echo "</section>";
     }
 
     mysqli_free_result($result);

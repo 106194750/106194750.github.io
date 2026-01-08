@@ -27,7 +27,7 @@ body {
 }
 
 a{
-    color: #a8d8f0; 
+    color: #1a9ddf; 
 }
 img{
     max-width:100%;
@@ -43,11 +43,11 @@ nav{
 h1{
     font: italic 2.2em 'Courier New', Courier, monospace ;
     text-align: center;
-    background-color: #a8d8f0;
+    background-color: #a8d8f0da;
     padding: 0.5%;
 }
 article, aside{
-    background-color: #1e88c8;
+    background-color: #44a9e7e0;
 padding: 2%;
 }
 article{
@@ -65,8 +65,8 @@ article::before{
 
 footer{
     width: 100%;
-    background-color:  #0b3c5d; 
-    border-top: 0.2em solid #a8d8f0; 
+    background-color:  #a8d8f0; 
+    border-top: 0.2em solid #0b3c5d; 
     padding: 1.5em;
     text-align: center; 
     font-size: 0.7em;
@@ -157,7 +157,7 @@ th, td{
 }
 th:hover, td:hover{
     color: #0b3c5d;
-    background-color: #a5b6dfe9;
+    background-color: #bed2ffe9;
     border: 0.1em solid white;
 }
 
