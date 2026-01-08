@@ -96,11 +96,11 @@ if ($action == "list_name") {
   $lname = $_POST["lastname"];
 
   if ($fname != "" && $lname != "") {
-    $sql = "SELECT * FROM eoi WHERE first_name = '$fname' AND last_name = '$lname'";
+    $sql = "SELECT * FROM eoi WHERE fname = '$fname' AND lname = '$lname'";
   } else if ($fname != "") {
-    $sql = "SELECT * FROM eoi WHERE first_name = '$fname'";
+    $sql = "SELECT * FROM eoi WHERE fname = '$fname'";
   } else {
-    $sql = "SELECT * FROM eoi WHERE last_name = '$lname'";
+    $sql = "SELECT * FROM eoi WHERE lname = '$lname'";
   }
 
   $result = mysqli_query($conn, $sql);
@@ -109,7 +109,7 @@ if ($action == "list_name") {
 // 4. Delete EOIs by job reference
 if ($action == "delete_job") {
   $jobref = $_POST["jobref"];
-  $sql = "DELETE FROM eoi WHERE job_ref_number = '$jobref'";
+  $sql = "DELETE FROM eoi WHERE jobref = '$jobref'";
   mysqli_query($conn, $sql);
   echo "<p>EOIs deleted.</p>";
 }
@@ -119,7 +119,7 @@ if ($action == "change_status") {
   $id = $_POST["eoi_id"];
   $status = $_POST["status"];
 
-  $sql = "UPDATE eoi SET status = '$status' WHERE eoi_id = $id";
+  $sql = "UPDATE eoi SET eoiStatus = '$status' WHERE EOInumber = $id";
   mysqli_query($conn, $sql);
   echo "<p>Status updated.</p>";
 }
