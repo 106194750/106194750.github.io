@@ -111,14 +111,8 @@ if (!empty($errors)) {
 
   $query2 = "
   INSERT INTO eoi
-<<<<<<< HEAD
-(jobref, fname, lname, dob, gender, phone, email, street, suburb, addressZone, city,
- skill1, skill2, skill3, skill4, otherSkills, eoiStatus)
-
-=======
   (jobref, fname, lname, dob, gender, phone, email, street, suburb, addressZone, city,
    skill1, skill2, skill3, skill4, otherSkills, eoiStatus)
->>>>>>> ace2a5839fd5c8663e64a017a18e57348236da25
   VALUES
 ('$jobref', '$fname', '$lname', '$dob', '$gender', '$phone', '$email',
  '$street', '$suburb', '$addressZone', '$city',
