@@ -37,6 +37,10 @@ $result = mysqli_query($conn, $query);
 
 // echo $result; <- nevermind, was using this for testing
 
+$result = mysqli_query($conn, $query);
+if (!$result) {
+      die("Table creation failed");
+}
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
   // get and sanitize the input. originally i was using htmlchar but that doesnt deal with sql injection
   {$jobref = mysqli_real_escape_string($conn, clean_input ($_POST['jobref']));
@@ -107,9 +111,14 @@ if (!empty($errors)) {
 
   $query2 = "
   INSERT INTO eoi
+<<<<<<< HEAD
 (jobref, fname, lname, dob, gender, phone, email, street, suburb, addressZone, city,
  skill1, skill2, skill3, skill4, otherSkills, eoiStatus)
 
+=======
+  (jobref, fname, lname, dob, gender, phone, email, street, suburb, addressZone, city,
+   skill1, skill2, skill3, skill4, otherSkills, eoiStatus)
+>>>>>>> ace2a5839fd5c8663e64a017a18e57348236da25
   VALUES
 ('$jobref', '$fname', '$lname', '$dob', '$gender', '$phone', '$email',
  '$street', '$suburb', '$addressZone', '$city',
