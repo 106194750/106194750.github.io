@@ -103,10 +103,7 @@
                         <label for="otherskills">Other Skills</label> <br>
                         <textarea id="otherskills" name="otherskills" rows="4" cols="40" placeholder="If you have other skills, let us know here..."></textarea>
                     </p>
-                    <p>
-                    <input type="checkbox" id="otherSkillCheck" name="otherSkillCheck" value="yes">
-                       <label for="otherSkillCheck">I have other relevant skills</label>
-                    </p>
+            
                     </fieldset>
                     </div>
             <input type= "submit" value="Apply">

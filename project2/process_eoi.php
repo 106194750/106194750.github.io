@@ -36,8 +36,8 @@ $query = "CREATE TABLE IF NOT EXISTS eoi (
 
 // echo $result; <- nevermind, was using this for testing
 
-if ($result) {
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($result) 
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
   // get and sanitize the input. originally i was using htmlchar but that doesnt deal with sql injection
   $jobref = mysqli_real_escape_string($conn, clean_input ($_POST['jobref']));
   $email = mysqli_real_escape_string($conn, clean_input ($_POST['email']));
@@ -67,10 +67,6 @@ $otherSkills = mysqli_real_escape_string(
 );
 if (empty($gender)) {
     $errors[] = "Gender is required.";
-}
-
-if (isset($_POST['otherSkillCheck']) && empty($otherSkills)) {
-    $errors[] = "Please describe your other skills.";
 }
 
 if (empty($jobref)) $errors[] = "Job reference number is required.";
