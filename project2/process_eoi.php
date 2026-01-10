@@ -24,7 +24,7 @@ $query = "CREATE TABLE IF NOT EXISTS eoi (
 $result = mysqli_query($conn, $query);
 // echo $result; <- nevermind, was using this for testing
 
-if (mysqli_num_rows($result) > 0) {
+if ($result) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // get and sanitize the input. originally i was using htmlchar but that doesnt deal with sql injection
   $jobref = mysqli_real_escape_string($conn, $_POST['jobref']);
