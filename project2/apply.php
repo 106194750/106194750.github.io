@@ -17,7 +17,8 @@
         <article>
             
             <h1>Apply for a position at HAZ Web Design</h1>
-         <form method="post" novalidate=”novalidate” action="process_eoi.php">
+    
+            <form method="post" novalidate="novalidate" action="process_eoi.php">
             <p>
                 <label for="jobref">Job Reference Number</label>
                 <select name="jobref" id="jobref" required>
@@ -41,9 +42,25 @@
                 </p>
                 </fieldset>
                 <fieldset>
+                 <legend>Gender</legend>
+                 <input type="radio" name="gender" value="Male" required> Male
+                 <input type="radio" name="gender" value="Female"> Female
+                 <input type="radio" name="gender" value="Other"> Other
+                 </fieldset>
+
+                <fieldset>
                     <legend>Address</legend>
-                <p><label for="city">City</label> 
-                    <input type="text" name= "city" id="city" pattern="^{0,40}$" required>
+                <p><label for="city">City</label>
+                   <select name="city" id="city" required>
+                   <option value="">Please select</option>
+                   <option value="Doha">Doha</option>
+                   <option value="Al Wakra">Al Wakra</option>
+                <option value="Al Khor">Al Khor</option>
+                 <option value="Dukhan">Dukhan</option>
+                 <option value="Al Shamal">Al Shamal</option>
+                 <option value="Mesaieed">Mesaieed</option>
+                  <option value="Ras Laffan">Ras Laffan</option>
+                </select>
                 </p>
                 <p><label for="zone">Zone</label> 
                     <input type="text" name= "zone" id="zone" pattern="^[0-9]{0,2}$" required>
@@ -88,6 +105,10 @@
                     <p>
                         <label for="otherskills">Other Skills</label> <br>
                         <textarea id="otherskills" name="otherskills" rows="4" cols="40" placeholder="If you have other skills, let us know here..."></textarea>
+                    </p>
+                    <p>
+                    <input type="checkbox" id="otherSkillCheck" name="otherSkillCheck" value="yes">
+                       <label for="otherSkillCheck">I have other relevant skills</label>
                     </p>
                     </fieldset>
                     </div>
