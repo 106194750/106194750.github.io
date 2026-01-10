@@ -3,12 +3,13 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
     header("Location: apply.php");
     exit();
 }
-
-$conn = mysqli_connect($host, $username, $password, $database);
-if (!$conn) {
-    die("Database connection failed");
+// function to clean up user input for security reasons
+function clean_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
+    return $data;
 }
-
 
 // header('Location: index.php');
 // makes eoi table 
@@ -41,9 +42,9 @@ $result = mysqli_query($conn, $query);
 if (!$result) {
       die("Table creation failed");
 }
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // get and sanitize the input. originally i was using htmlchar but that doesnt deal with sql injection
-  {$jobref = mysqli_real_escape_string($conn, clean_input ($_POST['jobref']));
+  $jobref = mysqli_real_escape_string($conn, clean_input ($_POST['jobref']));
   $email = mysqli_real_escape_string($conn, clean_input ($_POST['email']));
   $fname = mysqli_real_escape_string($conn, clean_input ($_POST['fname']));
   $lname = mysqli_real_escape_string($conn, clean_input ($_POST['lname']));
