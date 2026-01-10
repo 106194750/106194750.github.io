@@ -36,7 +36,10 @@ $query = "CREATE TABLE IF NOT EXISTS eoi (
 
 // echo $result; <- nevermind, was using this for testing
 
-if ($result) 
+$result = mysqli_query($conn, $query);
+if (!$result) {
+      die("Table creation failed");
+}
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
   // get and sanitize the input. originally i was using htmlchar but that doesnt deal with sql injection
   $jobref = mysqli_real_escape_string($conn, clean_input ($_POST['jobref']));
@@ -107,7 +110,7 @@ if (!empty($errors)) {
 
   $query2 = "
   INSERT INTO eoi
-  (jobref, fname, lname, dob, phone, email, street, suburb, addressZone, city,
+  (jobref, fname, lname, dob, gender, phone, email, street, suburb, addressZone, city,
    skill1, skill2, skill3, skill4, otherSkills, eoiStatus)
   VALUES
   ('$jobref', '$fname', '$lname', '$dob', '$gender', '$phone', '$email',
