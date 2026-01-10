@@ -16,56 +16,55 @@ $action = $_POST["action"] ?? "";
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+<?php include 'nav.inc'; ?>
 
 <h1>Manage EOIs</h1>
 
 <!-- 1. List all EOIs -->
-<form method="post">
+<form method="post"> 
   <input type="hidden" name="action" value="list_all">
   <button type="submit">List all EOIs</button>
 </form>
 
- <article class="flexb">
+<article class="flexb">
 <!-- 2. List EOIs by Job Reference Number -->
 <form method="post">
+  <h2>List EOIs by Job Reference Number</h2>
   <input type="hidden" name="action" value="list_job">
-  Job Reference Number:
-  <input type="text" name="jobref">
+  <label for="jobref_list">Job Reference Number:</label>
+  <input type="text" name="jobref" id="jobref_list">
   <button type="submit">Search</button>
 </form>
-
-
 
 <!-- 3. List EOIs by Applicant Name -->
 <form method="post">
+  <h2>List EOIs by Applicant Name</h2>
   <input type="hidden" name="action" value="list_name">
-  First Name:
-  <input type="text" name="firstname">
-  Last Name:
-  <input type="text" name="lastname">
+  <label for="firstname">First Name:</label>
+  <input type="text" name="firstname" id="firstname">
+  <label for="lastname">Last Name:</label>
+  <input type="text" name="lastname" id="lastname">
   <button type="submit">Search</button>
 </form>
 
-
-
 <!-- 4. Delete EOIs by Job Reference Number -->
 <form method="post">
+  <h2>Delete EOIs by Job Reference Number</h2>
   <input type="hidden" name="action" value="delete_job">
-  Job Reference Number:
-  <input type="text" name="jobref">
+  <label for="jobref_delete">Job Reference Number:</label>
+  <input type="text" name="jobref" id="jobref_delete">
   <button type="submit">Delete</button>
 </form>
 
-
-
 <!-- 5. Change EOI Status -->
 <form method="post">
+  <h2>Change EOI Status</h2>
   <input type="hidden" name="action" value="change_status">
-  EOI ID:
-  <input type="text" name="eoi_id">
+  <label for="eoi_id">EOI ID:</label>
+  <input type="text" name="eoi_id" id="eoi_id">
 
-  Status:
-  <select name="status">
+  <label for="status">Status:</label>
+  <select name="status" id="status">
     <option value="New">New</option>
     <option value="Current">Current</option>
     <option value="Final">Final</option>
@@ -74,7 +73,7 @@ $action = $_POST["action"] ?? "";
   <button type="submit">Update</button>
 </form>
 </article>
-<hr>
+
 
 <?php
 // 1. List all EOIs
@@ -150,6 +149,7 @@ if (isset($result)) {
 
 mysqli_close($conn);
 ?>
+<?php include 'footer.inc'; ?>
 
 </body>
 </html>
