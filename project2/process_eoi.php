@@ -32,14 +32,14 @@ $query = "CREATE TABLE IF NOT EXISTS eoi (
     otherSkills VARCHAR(500),
     eoiStatus ENUM('New', 'Current', 'Final') NOT NULL
 );";
+$result = mysqli_query($conn, $query);
 
 
 // echo $result; <- nevermind, was using this for testing
 
-if ($result) 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
   // get and sanitize the input. originally i was using htmlchar but that doesnt deal with sql injection
-  $jobref = mysqli_real_escape_string($conn, clean_input ($_POST['jobref']));
+  {$jobref = mysqli_real_escape_string($conn, clean_input ($_POST['jobref']));
   $email = mysqli_real_escape_string($conn, clean_input ($_POST['email']));
   $fname = mysqli_real_escape_string($conn, clean_input ($_POST['fname']));
   $lname = mysqli_real_escape_string($conn, clean_input ($_POST['lname']));
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   $suburb = mysqli_real_escape_string($conn, clean_input ($_POST['suburb']));
   $city = mysqli_real_escape_string($conn, clean_input ($_POST['city']));
   $errors = [];
-  $validCities = ['Doha','Al Wakra','Al Khor','Dukhan','Al Shamal','Mesaieed','Ras Laffan'];
+  $validCities = ['Doha','Al Wakra','Al Khor','Dukhan','Al Shamal','Mesaieed','Ras Laffan'];}
 if (!in_array($city, $validCities)) {
     $errors[] = "Invalid city selected.";
 }
@@ -107,12 +107,14 @@ if (!empty($errors)) {
 
   $query2 = "
   INSERT INTO eoi
-  (jobref, fname, lname, dob, phone, email, street, suburb, addressZone, city,
-   skill1, skill2, skill3, skill4, otherSkills, eoiStatus)
+(jobref, fname, lname, dob, gender, phone, email, street, suburb, addressZone, city,
+ skill1, skill2, skill3, skill4, otherSkills, eoiStatus)
+
   VALUES
-  ('$jobref', '$fname', '$lname', '$dob', '$gender', '$phone', '$email',
-   '$street', '$suburb', '$addressZone', '$city',
-   '$skill1', '$skill2', '$skill3', '$skill4', '$otherSkills', 'New')
+('$jobref', '$fname', '$lname', '$dob', '$gender', '$phone', '$email',
+ '$street', '$suburb', '$addressZone', '$city',
+ '$skill1', '$skill2', '$skill3', '$skill4', '$otherSkills', 'New')
+
   ";
 
 if (mysqli_query($conn, $query2)) {
