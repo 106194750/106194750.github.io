@@ -1,7 +1,9 @@
 <?php
+session_start();
 require_once "settings.php";
 
 $action = $_POST["action"] ?? "";
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +21,7 @@ $action = $_POST["action"] ?? "";
 <?php include 'nav.inc'; ?>
 
 <h1>Manage EOIs</h1>
-
+<?php if (isset($_SESSION["username"])):?>
 <!-- 1. List all EOIs -->
 <form method="post"> 
   <input type="hidden" name="action" value="list_all">
@@ -73,9 +75,10 @@ $action = $_POST["action"] ?? "";
   <button type="submit">Update</button>
 </form>
 </article>
-
-
+<?php else:?>
+  <article><p>Please<a href="login.php"> log in </a>or  <a href="register.php">register</a></p></article>
 <?php
+endif;
 // 1. List all EOIs
 if ($action == "list_all") {
   $sql = "SELECT * FROM eoi";
