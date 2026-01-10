@@ -71,9 +71,6 @@
                 <p><label for="suburb">Suburb</label> 
                     <input type="text" name= "suburb" id="suburb" required>
                 </p>
-                <p><label for="building">Building Number</label> 
-                    <input type="text" name= "building" id="building" pattern="^[0-9]{0,5}$" required>
-                </p>
                 </fieldset>
                 <fieldset>
                     <legend>Contact Information</legend>

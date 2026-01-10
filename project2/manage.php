@@ -1,11 +1,6 @@
 <?php
 require_once "settings.php";
 
-$conn = mysqli_connect($host, $user, $pwd, $sql_db);
-if (!$conn) {
-  die("Database connection failed");
-}
-
 $action = $_POST["action"] ?? "";
 ?>
 
@@ -14,59 +9,62 @@ $action = $_POST["action"] ?? "";
 <head>
   <meta charset="utf-8">
   <title>Manage EOIs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta charset="utf-8">
+  <meta name="description" content="form for managers of our website"> 
+  <meta name="keywords" content="login, manages">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+<?php include 'nav.inc'; ?>
 
 <h1>Manage EOIs</h1>
 
 <!-- 1. List all EOIs -->
-<form method="post">
+<form method="post"> 
   <input type="hidden" name="action" value="list_all">
   <button type="submit">List all EOIs</button>
 </form>
 
-<br>
-
+<article class="flexb">
 <!-- 2. List EOIs by Job Reference Number -->
 <form method="post">
+  <h2>List EOIs by Job Reference Number</h2>
   <input type="hidden" name="action" value="list_job">
-  Job Reference Number:
-  <input type="text" name="jobref">
+  <label for="jobref_list">Job Reference Number:</label>
+  <input type="text" name="jobref" id="jobref_list">
   <button type="submit">Search</button>
 </form>
-
-<br>
 
 <!-- 3. List EOIs by Applicant Name -->
 <form method="post">
+  <h2>List EOIs by Applicant Name</h2>
   <input type="hidden" name="action" value="list_name">
-  First Name:
-  <input type="text" name="firstname">
-  Last Name:
-  <input type="text" name="lastname">
+  <label for="firstname">First Name:</label>
+  <input type="text" name="firstname" id="firstname">
+  <label for="lastname">Last Name:</label>
+  <input type="text" name="lastname" id="lastname">
   <button type="submit">Search</button>
 </form>
 
-<br>
-
 <!-- 4. Delete EOIs by Job Reference Number -->
 <form method="post">
+  <h2>Delete EOIs by Job Reference Number</h2>
   <input type="hidden" name="action" value="delete_job">
-  Job Reference Number:
-  <input type="text" name="jobref">
+  <label for="jobref_delete">Job Reference Number:</label>
+  <input type="text" name="jobref" id="jobref_delete">
   <button type="submit">Delete</button>
 </form>
 
-<br>
-
 <!-- 5. Change EOI Status -->
 <form method="post">
+  <h2>Change EOI Status</h2>
   <input type="hidden" name="action" value="change_status">
-  EOI ID:
-  <input type="text" name="eoi_id">
+  <label for="eoi_id">EOI ID:</label>
+  <input type="text" name="eoi_id" id="eoi_id">
 
-  Status:
-  <select name="status">
+  <label for="status">Status:</label>
+  <select name="status" id="status">
     <option value="New">New</option>
     <option value="Current">Current</option>
     <option value="Final">Final</option>
@@ -74,8 +72,8 @@ $action = $_POST["action"] ?? "";
 
   <button type="submit">Update</button>
 </form>
+</article>
 
-<hr>
 
 <?php
 // 1. List all EOIs
@@ -97,11 +95,11 @@ if ($action == "list_name") {
   $lname = $_POST["lastname"];
 
   if ($fname != "" && $lname != "") {
-    $sql = "SELECT * FROM eoi WHERE first_name = '$fname' AND last_name = '$lname'";
+    $sql = "SELECT * FROM eoi WHERE fname = '$fname' AND lname = '$lname'";
   } else if ($fname != "") {
-    $sql = "SELECT * FROM eoi WHERE first_name = '$fname'";
+    $sql = "SELECT * FROM eoi WHERE fname = '$fname'";
   } else {
-    $sql = "SELECT * FROM eoi WHERE last_name = '$lname'";
+    $sql = "SELECT * FROM eoi WHERE lname = '$lname'";
   }
 
   $result = mysqli_query($conn, $sql);
@@ -110,7 +108,7 @@ if ($action == "list_name") {
 // 4. Delete EOIs by job reference
 if ($action == "delete_job") {
   $jobref = $_POST["jobref"];
-  $sql = "DELETE FROM eoi WHERE job_ref_number = '$jobref'";
+  $sql = "DELETE FROM eoi WHERE jobref = '$jobref'";
   mysqli_query($conn, $sql);
   echo "<p>EOIs deleted.</p>";
 }
@@ -120,7 +118,7 @@ if ($action == "change_status") {
   $id = $_POST["eoi_id"];
   $status = $_POST["status"];
 
-  $sql = "UPDATE eoi SET status = '$status' WHERE eoi_id = $id";
+  $sql = "UPDATE eoi SET eoiStatus = '$status' WHERE EOInumber = $id";
   mysqli_query($conn, $sql);
   echo "<p>Status updated.</p>";
 }
@@ -151,6 +149,7 @@ if (isset($result)) {
 
 mysqli_close($conn);
 ?>
+<?php include 'footer.inc'; ?>
 
 </body>
 </html>

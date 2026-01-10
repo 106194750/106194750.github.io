@@ -36,17 +36,8 @@ $query = "CREATE TABLE IF NOT EXISTS eoi (
 
 // echo $result; <- nevermind, was using this for testing
 
-if (!mysqli_query($conn, $query))
-{die("Table creation failed");}
-
-function clean_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-
-
+if ($result) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // get and sanitize the input. originally i was using htmlchar but that doesnt deal with sql injection
   $jobref = mysqli_real_escape_string($conn, clean_input ($_POST['jobref']));
   $email = mysqli_real_escape_string($conn, clean_input ($_POST['email']));

@@ -2,7 +2,7 @@
 
 filename: styles.css
 
-authors: hana ouaida, asma hossain
+authors: hana ouaida, asma hossain, zahra ahmed
 
 created: 23-12-25
 
@@ -21,17 +21,13 @@ that gets rid of the annoying horizontal scrolling. im not sure whats causing it
 
 body {
   background-image: url("images/background.jpg");
-<<<<<<< HEAD
   color: black;
-=======
-  color: rgba(255, 255, 255, 0);
->>>>>>> 0ca425fbf965a45827b9b5545e0f03d76e9fdae1
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.3em;
 }
 
 a{
-    color: #a8d8f0; 
+    color: #005c8a; 
 }
 img{
     max-width:100%;
@@ -47,12 +43,12 @@ nav{
 h1{
     font: italic 2.2em 'Courier New', Courier, monospace ;
     text-align: center;
-    background-color: #a8d8f0;
+    background-color: #a8d8f0da;
     padding: 0.5%;
 }
 article, aside{
-    background-color: #1e88c8;
-padding: 2%;
+    background-color: #7ac4f1d7;
+padding: 1%;
 }
 article{
     position: relative;
@@ -69,8 +65,8 @@ article::before{
 
 footer{
     width: 100%;
-    background-color:  #0b3c5d; 
-    border-top: 0.2em solid #a8d8f0; 
+    background-color:  #a8d8f0; 
+    border-top: 0.2em solid #0b3c5d; 
     padding: 1.5em;
     text-align: center; 
     font-size: 0.7em;
@@ -152,7 +148,7 @@ th{
 
 }
 th, td{
-    background-color: #0b3c5d;
+    background-color: #abd1eb;
     padding: 0.25em;
     border-radius: 0.11em;
     border: 0.1em solid transparent;
@@ -161,7 +157,7 @@ th, td{
 }
 th:hover, td:hover{
     color: #0b3c5d;
-    background-color: #a5b6dfe9;
+    background-color: #bed2ffe9;
     border: 0.1em solid white;
 }
 
@@ -181,59 +177,39 @@ nav img{
 }
 
 label {
-color: #e6f4fb;
 font-family: 'Courier New', Courier, monospace;
 padding: 0em
 
 }
 
-input[type="text"] {
-border: 2px solid#a8d8f0;
-background-color:#0b3c5d;
+input[type="text"], textarea, select, input[type="password"]{
+border: 2px solid#0b3c5d;
+background-color:#a8d8f0;
 margin: 0.7em;
-    color: plum;
 }
 
 form {
     display: grid;
-    padding: 1em;
-    margin: 1em;
+    padding: 0.5em;
+    margin: 0.1em;
 
-    background-color: #1e88c8;
+    background-color: #34a1e4;
     border-radius: 0.6em;
 }
 
 
 input[type="submit"],
-input[type="reset"] {
+input[type="reset"], button{
     border:#1e88c8 ridge;
     text-decoration: none;
     margin: .2em;
-    background-color: #a5b6dfe9;
+    background-color: #a1cdff;
     padding: .3em;
      border-radius: 0.3em;
     color:#1F0745;
     font-weight: bold;
 }
 
-select {
-border: 0.2em solid  #a8d8f0;
-background-color:  #0b3c5d;
-padding: 0.2em;
-margin: 0.7em;  
-}
-
-select {
-    color: #ffffff;
-}
-
-textarea {
-border: 0.2em solid #a8d8f0;
-background-color: #0b3c5d;
-padding: 1em;
-margin: 0.7em;
-color: #ffffff;
-}
 
 figure {
     text-align: center;
