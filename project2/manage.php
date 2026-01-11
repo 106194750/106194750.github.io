@@ -15,6 +15,7 @@ $action = $_POST["action"] ?? "";
   <meta charset="utf-8">
   <meta name="description" content="form for managers of our website"> 
   <meta name="keywords" content="login, manages">
+  <meta name="author" content="asma hossain"> 
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>

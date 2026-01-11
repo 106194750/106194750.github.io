@@ -49,9 +49,13 @@ h1{
 article, aside{
     background-color: #7ac4f1d7;
 padding: 1%;
+
 }
 article{
     position: relative;
+        border-radius: 0.7em;
+    box-shadow: 0 5px 10px #8185a3; 
+
 }
 
 article::before{
@@ -64,7 +68,7 @@ article::before{
 }
 
 footer{
-    width: 100%;
+    max-width: 100%;
     background-color:  #a8d8f0; 
     border-top: 0.2em solid #0b3c5d; 
     padding: 1.5em;
@@ -114,7 +118,7 @@ display:flex;
    justify-content: space-evenly;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1700px) {
   .flexb{
     flex-direction: column;
   }
@@ -174,6 +178,7 @@ nav img{
     padding:.3em ;
     height: 1.85em;
      display: block;
+     border-radius: 0.6em;
 }
 
 label {
@@ -213,24 +218,73 @@ input[type="reset"], button{
 
 figure {
     text-align: center;
-    margin: 2em auto;
+    margin: 1em;
     float: right;
 }
 
+.e{
+        min-width: 100%;  
+}
 figure img {
-    width: 20em;  
+    max-width: 20%;  
+    height: auto;
     border: solid #a8d8f0;
+    border-width: .5em;
     border-radius: 1em;
-    display: block;
-    margin: 0 auto;
+    display: inline;
+    margin: 0.5em auto;
 }
 
 figure figcaption {
-    margin-top: 0.5em;
-    font-size: 0.9em;
-    color: #e6f4fb;
+    margin: 0.5em;
+    font-size: 1.3em;
+    color: #174055;
 }
 
 #id{
     float: right;
+}
+.services {
+    background-color: #7ac4f1d7; 
+    padding: 2em;
+    margin: 2em auto;
+    border-radius: 0.7em;
+    box-shadow: 0 5px 15px #51546d; 
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #0b3c5d;
+    border-bottom: 2px solid #1e88c8;
+    display: inline-block;
+    padding-bottom: 0.2em;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-list li {
+    background-color: #a8d8f0; 
+    color: #0b3c5d; 
+    margin: 0.5em;
+    padding: 1em 1.5em;
+    border-radius: 0.5em;
+    flex: 0 0 30%;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 3px 8px #51546d; 
+    transition: transform 0.3s, background 0.3s;
+}
+
+.service-list li:hover {
+    transform: translateY(-5px);
+    background-color: #2575fc; 
+    color: white; 
 }
