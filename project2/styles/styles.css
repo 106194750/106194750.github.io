@@ -218,7 +218,8 @@ figure {
 }
 
 figure img {
-    width: 20em;  
+    width: 23em;  
+    height: auto;
     border: solid #a8d8f0;
     border-radius: 1em;
     display: block;
@@ -226,9 +227,9 @@ figure img {
 }
 
 figure figcaption {
-    margin-top: 0.5em;
-    font-size: 0.9em;
-    color: #e6f4fb;
+    margin: 0.5em;
+    font-size: 1.3em;
+    color: #174055;
 }
 
 #id{
