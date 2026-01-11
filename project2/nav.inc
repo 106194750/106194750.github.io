@@ -1,7 +1,7 @@
 <?php echo"
 <nav>
     <ul>
-    <li><img src='images/logo.jpg' alt='HAZ Web Design Logo'></li>
+    <li><img src='images/logo.png' alt='HAZ Web Design Logo'></li>
     <li><a href='index.php'>Home</a></li>
     <li><a href= 'about.php'>About Us</a></li>
     <li><a href='jobs.php'> Openings</a></li>

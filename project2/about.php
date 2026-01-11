@@ -30,7 +30,8 @@
     <h2>Contributions</h2>
     <dl>
     <dt>Hana Ouaida</dt>    
-    <dd>Wrote the HTML for apply.html, about.html, and the menu, and wrote the general CSS.</dd>
+    <dd>Wrote the HTML for apply.html, about.html, and the menu, and wrote the general CSS.
+</dd>
     <dt>Asma Hossain</dt>
     <dd>Wrote the HTML for index.html, created and styled the footer, created the logo.</dd>
     <dt>Zahra Ahmad</dt>
