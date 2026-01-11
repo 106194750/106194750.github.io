@@ -15,7 +15,7 @@ if (empty($_POST["password"])) {
 $input_username = $_POST['username'];
 $input_password = $_POST['password'];
 
-// check credentials with prepared statement - see week 11 for more...
+// check credentials with prepared statement
 $stmt = $conn->prepare("
     SELECT username, passwordhash, failed_attempts, locked_until
     FROM managers
@@ -28,7 +28,10 @@ $user = $result->fetch_assoc();
 
 if ($user) {
 
-    if ($user['locked_until'] !== NULL && strtotime($user['locked_until']) > time()) {
+    if (!empty($user['locked_until']) &&
+        $user['locked_until'] !== '0000-00-00 00:00:00' &&
+        strtotime($user['locked_until']) > time()
+    ) {
         die("Account locked due to multiple failed login attempts. Please try again later.");
     }
 
@@ -73,13 +76,13 @@ if ($user) {
             $update->bind_param("is", $attempts, $input_username);
             $update->execute();
 
-              echo "<p>Incorrect username or password. Please try again.</p>";
-              echo '<p><a href="login.php">Go back to login</a></p>';
+            echo "<p>Incorrect username or password. Please try again.</p>";
+            echo '<p><a href="login.php">Go back to login</a></p>';
         }
     }
 
 } else {
-      echo "<p>Incorrect username or password. Please try again.</p>";
+    echo "<p>Incorrect username or password. Please try again.</p>";
     echo '<p><a href="login.php">Go back to login</a></p>';
 }
 ?>
