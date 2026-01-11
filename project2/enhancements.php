@@ -20,15 +20,15 @@
                 <li><a href="#login">Manager Login</a></li>
             </ol>
             <div class="flexb">
-    <figure>
+    <figure id="sort" >
         <img src="images/managesort.png"  class="e" alt="Sorting EOIs">
         <figcaption>Managers are able to sort records on manage.php by various parameters, such as name and reference number.</figcaption>
     </figure>
-    <figure>
+    <figure id="register" >
         <img src="images/register.png"  class="e" alt="Manager Registration">
         <figcaption>Managers can register accounts through register.php, and their details will be stored in our database.</figcaption>
     </figure>
-    <figure>
+    <figure id="login">
         <img src="images/plzlogin.png"  class="e" alt="Manager Login">
         <figcaption>Managers can only access the contents of manage.php if they are logged in to their accounts</figcaption>
     </figure>
