@@ -10,7 +10,10 @@ if (empty($_POST["password"])) {
 
 $query = "CREATE TABLE IF NOT EXISTS managers(managerID INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
     username VARCHAR(20) NOT NULL UNIQUE,
-    passwordhash VARCHAR(300) NOT NULL);";
+    passwordhash VARCHAR(300) NOT NULL,
+    failed_attempts INT NOT NULL DEFAULT 0,
+    locked_until DATETIME NULL)
+    ;";
 $result = mysqli_query($conn, $query);
 
 if ($_SERVER["REQUEST_METHOD"] != "POST") {

@@ -36,7 +36,7 @@
     <dt>Asma Hossain</dt>
     <dd>Wrote the manage.php, implemented features to list all EOIs, list EOIs by job reference number, list EOIs by applicant name, delete EOIs by job reference number, change the status of an EOI, updated the CSS for accessibility, modified the about.html page, and added the ability for the manager to select the field to sort EOI records.</dd>
     <dt>Zahra Ahmad</dt>
-    <dd>Wrote the settings.php, implemented data sanitization, server-side validation, and prevented direct URL access, created an error page for invalid responses in apply.php, edited apply.php to work with process_eoi.php,  wrote the HTML for jobs.html, and styled the form in apply.html using CSS.</dd>
+    <dd>Wrote the settings.php, implemented data sanitization, server-side validation, and prevented direct URL access, created an error page for invalid responses in apply.php, edited apply.php to work with process_eoi.php, implemented account-locking after multiple invalid attempts, wrote the HTML for jobs.html, and styled the form in apply.html using CSS.</dd>
 </dl>
 
 </section>
