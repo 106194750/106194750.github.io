@@ -17,7 +17,7 @@ if (empty($_POST["username"])) {
 if (empty($_POST["password"])) {
     die("A password is required.");
 }
-
+    
 $input_username = $_POST['username'];
 $input_password = $_POST['password'];
 
