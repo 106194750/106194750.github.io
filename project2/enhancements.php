@@ -17,7 +17,7 @@
             <ol>
                 <li><a href="#sort">Sorting Records</a></li>    
                 <li><a href="#register">Manager Registration</a></li>
-                <li><a href="#login">Manager Login</a></li>
+                <li><a href="#login">Manager Login</a>- after three invalid attempts, accounts are temporarily locked.</li>
             </ol>
             <div class="flexb">
     <figure id="sort" >
