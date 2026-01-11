@@ -7,6 +7,7 @@
     <li><a href='jobs.php'> Openings</a></li>
     <li><a href='apply.php'> Apply Now</a></li>
     <li><a href='manage.php'> Managers</a></li>
+     <li><a href='enhancements.php'>Enhancements</a></li>
     <li><a href='mailto:info@hazwebdesign.com.au'>Email Us</a></li>
     </ul>
 </nav>";
