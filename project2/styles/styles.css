@@ -64,7 +64,7 @@ article::before{
 }
 
 footer{
-    width: 100%;
+    max-width: 100%;
     background-color:  #a8d8f0; 
     border-top: 0.2em solid #0b3c5d; 
     padding: 1.5em;
@@ -218,15 +218,16 @@ figure {
     float: right;
 }
 
+.e{
+        min-width: 100%;  
+}
 figure img {
-    min-width: 50%;  
+    max-width: 20%;  
     height: auto;
     border: solid #a8d8f0;
-        border-width: .5em;
-
+    border-width: .5em;
     border-radius: 1em;
-    display: block;
-    
+    display: inline;
     margin: 0.5em auto;
 }
 

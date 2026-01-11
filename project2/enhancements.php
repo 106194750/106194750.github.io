@@ -15,21 +15,21 @@
             <h1>Enhancements</h1>
             <h2>Enhancements we made to our site</h2>
             <ol>
-                <li>Sorting Records</li>    
-                <li>Manager Registration</li>
-                <li>Manager Login</li>
+                <li><a href="#sort">Sorting Records</a></li>    
+                <li><a href="#register">Manager Registration</a></li>
+                <li><a href="#login">Manager Login</a></li>
             </ol>
             <div class="flexb">
-    <figure>
-        <img src="images/managesort.png">
+    <figure id="sort">
+        <img src="images/managesort.png" class="e">
         <figcaption>Managers are able to sort records on manage.php by various parameters, such as name and reference number.</figcaption>
     </figure>
-    <figure>
-        <img src="images/register.png" >
+    <figure id="register">
+        <img class="e" src="images/register.png" >
         <figcaption>Managers can register accounts through register.php, and their details will be stored in our database.</figcaption>
     </figure>
     <figure>
-        <img src="images/plzlogin.png" >
+        <img class="e" src="images/plzlogin.png" id="login" >
         <figcaption>Managers can only access the contents of manage.php if they are logged in to their accounts</figcaption>
     </figure>
     </div>

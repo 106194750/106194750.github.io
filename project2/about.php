@@ -10,10 +10,12 @@
 <body>
 <?php include 'nav.inc'; ?>
 <article>
-    <h1>About Us</h1> <figure>
+    <h1>About Us</h1> 
+    <section>    <figure>
         <img src="images/pic.jpeg" alt="HAZ Group Photo">
         <figcaption>Our Team - HAZ Web Designs</figcaption>
-    </figure>
+    </figure></section>
+
     <section id="id">
             <h2>Our Group HAZ Skillz</h2>
 <ol >
