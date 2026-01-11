@@ -15,7 +15,7 @@ if (empty($_POST["password"])) {
 $input_username = $_POST['username'];
 $input_password = $_POST['password'];
 
-// check credentials with prepared statement
+
 $stmt = $conn->prepare("
     SELECT username, passwordhash, failed_attempts, locked_until
     FROM managers
@@ -51,31 +51,39 @@ if ($user) {
 
     } else {
 
-        $attempts = $user['failed_attempts'] + 1;
+        
+        $update = $conn->prepare("
+            UPDATE managers
+            SET failed_attempts = failed_attempts + 1
+            WHERE username = ?
+        ");
+        $update->bind_param("s", $input_username);
+        $update->execute();
 
-        if ($attempts >= 3) {
+        $lock = $conn->prepare("
+        UPDATE managers
+        SET locked_until = NOW() + INTERVAL 15 MINUTE
+        WHERE username = ? AND failed_attempts >= 3
+        ");
+       $lock->bind_param("s", $input_username);
+       $lock->execute();
 
-            $lock_time = date("Y-m-d H:i:s", strtotime("+15 minutes"));
-            $update = $conn->prepare("
-                UPDATE managers
-                SET failed_attempts = ?, locked_until = ?
-                WHERE username = ?
-            ");
-            $update->bind_param("iss", $attempts, $lock_time, $input_username);
-            $update->execute();
+        $stmt = $conn->prepare("
+            SELECT failed_attempts, locked_until
+            FROM managers
+            WHERE username = ?
+        ");
+        $stmt->bind_param("s", $input_username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $user = $result->fetch_assoc();
 
+        $lockedUntil = strtotime($user['locked_until'] ?? '');
+        if ($lockedUntil && $lockedUntil > time()) {
             echo "<p>Too many failed login attempts. Account locked for 15 minutes.</p>";
             echo '<p><a href="login.php">Go back to login</a></p>';
             exit();
         } else {
-            $update = $conn->prepare("
-                UPDATE managers
-                SET failed_attempts = ?
-                WHERE username = ?
-            ");
-            $update->bind_param("is", $attempts, $input_username);
-            $update->execute();
-
             echo "<p>Incorrect username or password. Please try again.</p>";
             echo '<p><a href="login.php">Go back to login</a></p>';
         }
