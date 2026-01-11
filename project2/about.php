@@ -32,12 +32,11 @@
     <h2>Contributions</h2>
     <dl>
     <dt>Hana Ouaida</dt>    
-    <dd>Wrote the HTML for apply.html, about.html, and the menu, and wrote the general CSS.
-</dd>
+    <dd>Wrote the HTML for apply.html and about.html, created reusable PHP includes for the menu and footer, designed the general CSS, built a manager registration page with server-side validation enforcing unique usernames and password rules, stored manager data in a database table, and implemented login control for manage.php to restrict access based on username and password.</dd>
     <dt>Asma Hossain</dt>
-    <dd>Wrote the HTML for index.html, created and styled the footer, created the logo.</dd>
+    <dd>Wrote the manage.php, implemented features to list all EOIs, list EOIs by job reference number, list EOIs by applicant name, delete EOIs by job reference number, change the status of an EOI, updated the CSS for accessibility, modified the about.html page, and added the ability for the manager to select the field to sort EOI records.</dd>
     <dt>Zahra Ahmad</dt>
-    <dd>Wrote the HTML for jobs.html and styled the form in apply.html using CSS.</dd>
+    <dd>Wrote the settings.php, implemented data sanitization, server-side validation, and prevented direct URL access, created an error page for invalid responses in apply.php, edited apply.php to work with process_eoi.php,  wrote the HTML for jobs.html, and styled the form in apply.html using CSS.</dd>
 </dl>
 
 </section>

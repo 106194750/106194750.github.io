@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="description" content="page detailing enhancements made to our website"> 
         <meta name="keywords" content="enhancements">
-        <meta name="author" content="hana ouaida"> 
+        <meta name="author" content="hana ouaida, asma hossain"> 
         <title>Enhancements</title>
        <link rel="stylesheet" href="styles/styles.css">
     </head>
@@ -20,16 +20,16 @@
                 <li><a href="#login">Manager Login</a></li>
             </ol>
             <div class="flexb">
-    <figure id="sort">
-        <img src="images/managesort.png" class="e">
+    <figure>
+        <img src="images/managesort.png"  class="e" alt="Sorting EOIs">
         <figcaption>Managers are able to sort records on manage.php by various parameters, such as name and reference number.</figcaption>
     </figure>
-    <figure id="register">
-        <img class="e" src="images/register.png" >
+    <figure>
+        <img src="images/register.png"  class="e" alt="Manager Registration">
         <figcaption>Managers can register accounts through register.php, and their details will be stored in our database.</figcaption>
     </figure>
     <figure>
-        <img class="e" src="images/plzlogin.png" id="login" >
+        <img src="images/plzlogin.png"  class="e" alt="Manager Login">
         <figcaption>Managers can only access the contents of manage.php if they are logged in to their accounts</figcaption>
     </figure>
     </div>
