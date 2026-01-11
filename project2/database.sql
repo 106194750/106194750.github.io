@@ -1,6 +1,7 @@
+-- please note that other tables are created elsewhere using CREATE IF NOT EXISTS statements and php
 USE haz,
 
-    CREATE TABLE jobs (
+CREATE TABLE jobs (
 id INT AUTO_INCREMENT PRIMARY KEY,
 Job_title VARCHAR(100) NOT NULL,
 Job_description TEXT NOT NULL,
@@ -11,8 +12,6 @@ Key_Responsibilities TEXT NOT NULL,
 Essential_Qualifications TEXT NOT NULL,
 Preferred_Skills TEXT NOT NULL,
 Programming_Languages TEXT);
-
-
 
 INSERT INTO jobs
 (Job_title, Job_description, Reference_Number, Salary_Range, Reports_to,
