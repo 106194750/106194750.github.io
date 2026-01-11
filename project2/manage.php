@@ -23,14 +23,14 @@ $action = $_POST["action"] ?? "";
 
 <h1>Manage EOIs</h1>
 <?php if (isset($_SESSION["username"])):?>
-<!-- 1. List all EOIs -->
+
 <form method="post"> 
   <input type="hidden" name="action" value="list_all">
   <button type="submit">List all EOIs</button>
 </form>
 
 <article class="flexb">
-<!-- 2. List EOIs by Job Reference Number -->
+
 <form method="post">
   <h2>List EOIs by Job Reference Number</h2>
   <input type="hidden" name="action" value="list_job">
@@ -39,7 +39,6 @@ $action = $_POST["action"] ?? "";
   <button type="submit">Search</button>
 </form>
 
-<!-- 3. List EOIs by Applicant Name -->
 <form method="post">
   <h2>List EOIs by Applicant Name</h2>
   <input type="hidden" name="action" value="list_name">
@@ -50,7 +49,7 @@ $action = $_POST["action"] ?? "";
   <button type="submit">Search</button>
 </form>
 
-<!-- 4. Delete EOIs by Job Reference Number -->
+
 <form method="post">
   <h2>Delete EOIs by Job Reference Number</h2>
   <input type="hidden" name="action" value="delete_job">
@@ -59,7 +58,7 @@ $action = $_POST["action"] ?? "";
   <button type="submit">Delete</button>
 </form>
 
-<!-- 5. Change EOI Status -->
+
 <form method="post">
   <h2>Change EOI Status</h2>
   <input type="hidden" name="action" value="change_status">
@@ -80,20 +79,20 @@ $action = $_POST["action"] ?? "";
   <article><p>Please<a href="login.php"> log in </a>or  <a href="register.php">register</a></p></article>
 <?php
 endif;
-// 1. List all EOIs
+
 if ($action == "list_all") {
   $sql = "SELECT * FROM eoi";
   $result = mysqli_query($conn, $sql);
 }
 
-// 2. List EOIs by job reference
+
 if ($action == "list_job") {
   $jobref = $_POST["jobref"];
   $sql = "SELECT * FROM eoi WHERE job_ref_number = '$jobref'";
   $result = mysqli_query($conn, $sql);
 }
 
-// 3. List EOIs by applicant name
+
 if ($action == "list_name") {
   $fname = $_POST["firstname"];
   $lname = $_POST["lastname"];
@@ -109,7 +108,7 @@ if ($action == "list_name") {
   $result = mysqli_query($conn, $sql);
 }
 
-// 4. Delete EOIs by job reference
+
 if ($action == "delete_job") {
   $jobref = $_POST["jobref"];
   $sql = "DELETE FROM eoi WHERE jobref = '$jobref'";
@@ -117,7 +116,7 @@ if ($action == "delete_job") {
   echo "<p>EOIs deleted.</p>";
 }
 
-// 5. Change EOI status
+
 if ($action == "change_status") {
   $id = $_POST["eoi_id"];
   $status = $_POST["status"];
@@ -127,7 +126,7 @@ if ($action == "change_status") {
   echo "<p>Status updated.</p>";
 }
 
-// Display results
+
 if (isset($result)) {
   echo "<table border='1'>";
   echo "<tr>
