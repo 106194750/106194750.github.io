@@ -21,12 +21,12 @@
 <section class="services">
 <h2>Our Services</h2>
 <ul class="service-list">
-<li>💻 Custom Website Design</li>
-<li>🎨 Creative UI/UX Design</li>
-<li>⚡ Responsive & Mobile-First Development</li>
-<li>🔒 Secure Registration & Login Systems</li>
-<li>📊 Data Management & EOI Record Systems</li>
-<li>🖼️ Visual Enhancements & Interactive Features</li>
+<li>🔴 Custom Website Design</li>
+<li>🟧 Creative UI/UX Design</li>
+<li>🟡 Responsive & Mobile-First Development</li>
+<li>🟩 Secure Registration & Login Systems</li>
+<li>🔵 Data Management & EOI Record Systems</li>
+<li>🟪 Visual Enhancements & Interactive Features</li>
 </ul>
 </section>
 
